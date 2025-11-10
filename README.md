@@ -332,10 +332,3 @@ Status: Production Ready
 Live Demo: https://frontend-for-rental-property-listin.vercel.app/
 
 ---
-
-✅ **You can copy-paste this entire block directly into your `README.md`.**  
-It now includes:
-- Live demo link (top + bottom)  
-- Demo credentials  
-- Clean section layout  
-- Ready for GitHub or documentation display.
