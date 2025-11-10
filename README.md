@@ -1,6 +1,6 @@
 
 # 🏠 Rental Property Listing Website (MERN)
-
+# THE LOGGING IN PROCESS MIGHT TAKE A FEW SECONDS AS IT IS HOSTED ON RENDER.COM FREE INSTANCE.
 **Live Demo:** 👉 [https://frontend-for-rental-property-listin.vercel.app/](https://frontend-for-rental-property-listin.vercel.app/)  
 
 **Demo Credentials for Testing:**
