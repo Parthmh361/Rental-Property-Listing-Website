@@ -88,30 +88,31 @@ Password: admin@123
 
 ## 📁 Folder Structure
 
-fullstack-auth-app/
+```
+Rental_Property_Listing_Website/
 ├── backend/
 │   ├── config/
-│   │   └── db.js
+│   │   └── db.js                 # MongoDB connection
 │   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── propertyController.js
-│   │   └── reviewController.js
+│   │   ├── authController.js     # Auth logic (signup/login)
+│   │   ├── propertyController.js # Property CRUD operations
+│   │   └── reviewController.js   # Review management
 │   ├── middleware/
-│   │   └── authMiddleware.js
+│   │   └── authMiddleware.js     # JWT verification
 │   ├── models/
-│   │   ├── User.js
-│   │   ├── Property.js
-│   │   └── Review.js
+│   │   ├── User.js               # User schema
+│   │   ├── Property.js           # Property schema with owner details
+│   │   └── Review.js             # Review schema
 │   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── propertyRoutes.js
-│   │   └── reviewRoutes.js
+│   │   ├── authRoutes.js         # Auth endpoints
+│   │   ├── propertyRoutes.js     # Property endpoints
+│   │   └── reviewRoutes.js       # Review endpoints
 │   ├── scripts/
-│   │   └── seed.js
+│   │   └── seed.js               # Seed 20 properties with images
 │   ├── utils/
-│   │   └── generateToken.js
-│   ├── server.js
-│   ├── .env.example
+│   │   └── generateToken.js      # JWT token generation
+│   ├── server.js                 # Express server setup
+│   ├── .env.example              # Environment variables template
 │   └── package.json
 │
 ├── frontend/
@@ -119,30 +120,29 @@ fullstack-auth-app/
 │   │   └── index.html
 │   ├── src/
 │   │   ├── components/
-│   │   │   ├── Navbar.jsx
-│   │   │   ├── ProtectedRoute.jsx
-│   │   │   ├── PropertyCard.jsx
-│   │   │   └── ReviewSection.jsx
+│   │   │   ├── Navbar.jsx        # Navigation bar
+│   │   │   ├── ProtectedRoute.jsx # Auth guard
+│   │   │   ├── PropertyCard.jsx  # Property listing card
+│   │   │   └── ReviewSection.jsx # Reviews component
 │   │   ├── pages/
-│   │   │   ├── Home.jsx
-│   │   │   ├── Login.jsx
-│   │   │   ├── Signup.jsx
-│   │   │   ├── NewProperty.jsx
-│   │   │   └── PropertyDetail.jsx
+│   │   │   ├── Home.jsx          # Property listing page
+│   │   │   ├── Login.jsx         # Login page
+│   │   │   ├── Signup.jsx        # Registration page
+│   │   │   ├── NewProperty.jsx   # Create property form
+│   │   │   └── PropertyDetail.jsx # Property detail view
 │   │   ├── services/
-│   │   │   └── api.js
+│   │   │   └── api.js            # Axios instance with interceptors
 │   │   ├── context/
-│   │   │   └── AuthContext.jsx
-│   │   ├── App.jsx
-│   │   └── main.jsx
+│   │   │   └── AuthContext.jsx   # Global auth state
+│   │   ├── App.jsx               # Main app component
+│   │   └── main.jsx              # React entry point
 │   ├── index.html
 │   ├── vite.config.js
 │   ├── .env.example
 │   └── package.json
 │
 └── README.md
-
----
+```
 
 ## 🚀 Getting Started
 
