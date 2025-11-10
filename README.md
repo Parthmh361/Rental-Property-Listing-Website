@@ -1,6 +1,6 @@
 # Rental Property Listing Website (MERN)
 
-A professional full-stack MERN application for browsing and listing rental properties. Features comprehensive authentication with JWT, dynamic property management, image galleries, reviews, and advanced search filters. Built with modern best practices including Vite, React 18, Bootstrap 5, and MongoDB Atlas.
+A professional full-stack MERN application for browsing and listing rental properties. Features comprehensive authentication with JWT, dynamic property management, image galleries, reviews, and advanced search filters. Built with modern best practices including Vite, React 18, Bootstrap 5, and MongoDB Compass (Local Database).
 
 ## 🌟 Features
 
@@ -36,7 +36,7 @@ A professional full-stack MERN application for browsing and listing rental prope
 - Star-based rating system
 
 ### Database
-- MongoDB Atlas cloud database
+- MongoDB Compass (Local MongoDB instance)
 - 20 sample properties across major Indian cities
 - Comprehensive data schema with validation
 - Efficient querying with Mongoose ODM
@@ -125,41 +125,47 @@ fullstack-auth-app/
 
 - Node.js 18 or higher
 - npm or yarn package manager
-- MongoDB Atlas account (free tier available)
+- MongoDB Compass (local MongoDB database)
 - Modern web browser
 
 ### Backend Setup
 
-1. **Clone and navigate to backend:**
+1. **Install and Start MongoDB Compass:**
+   - Download from https://www.mongodb.com/products/compass
+   - Install and launch MongoDB Compass
+   - Default connection: `mongodb://127.0.0.1:27017`
+   - Verify connection is successful
+
+2. **Clone and navigate to backend:**
    ```bash
    cd backend
    ```
 
-2. **Create `.env` file:**
+3. **Create `.env` file:**
    ```bash
    cp .env.example .env
    ```
 
-3. **Configure environment variables in `.env`:**
+4. **Configure environment variables in `.env`:**
    ```
-   MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/rental_app
-   JWT_SECRET=your_super_secret_key_here_change_in_production
+   MONGO_URI=mongodb://127.0.0.1:27017/rental_app
+   JWT_SECRET=your_super_secret_key_change_in_production
    PORT=5000
-   CLIENT_ORIGIN=http://localhost:5173
+   CLIENT_ORIGIN=http://localhost:5173,http://localhost:5174
    ```
 
-4. **Install dependencies:**
+5. **Install dependencies:**
    ```bash
    npm install
    ```
 
-5. **Seed sample properties (20 listings with images):**
+6. **Seed sample properties (20 listings with images):**
    ```bash
    npm run seed
    ```
-   Output: "Seeded 21 properties"
+   Output: "Seeded 20 properties"
 
-6. **Start development server:**
+7. **Start development server:**
    ```bash
    npm run dev
    ```
@@ -180,6 +186,13 @@ fullstack-auth-app/
 3. **Install dependencies:**
    ```bash
    npm install
+   ```
+
+4. **Start development server:**
+   ```bash
+   npm run dev
+   ```
+   App runs at: **http://localhost:5173**
    ```
 
 4. **Start development server:**
@@ -315,6 +328,59 @@ fullstack-auth-app/
 cd frontend
 npm run build
 npm run preview
+```
+
+### Backend Deployment
+1. Deploy to platforms like Heroku, Railway, or Render
+2. Set environment variables in production dashboard
+3. **For production**: Replace MongoDB Compass with MongoDB Atlas
+   - Create MongoDB Atlas account: https://www.mongodb.com/cloud/atlas
+   - Get connection string and add to environment variables
+   - Configure IP whitelist for your deployment server
+4. Update `CLIENT_ORIGIN` for CORS with your frontend URL
+
+### Environment Variables (Production)
+```
+# For Production: Use MongoDB Atlas
+MONGO_URI=mongodb+srv://user:pass@cluster.mongodb.net/rental_app
+JWT_SECRET=long_random_secure_secret_key_minimum_32_chars
+PORT=5000
+CLIENT_ORIGIN=https://your-frontend-domain.com
+NODE_ENV=production
+```
+
+### Environment Variables (Local Development)
+```
+# For Local Development: Use MongoDB Compass
+MONGO_URI=mongodb://127.0.0.1:27017/rental_app
+JWT_SECRET=dev_secret_key
+PORT=5000
+CLIENT_ORIGIN=http://localhost:5173,http://localhost:5174
+```
+
+## 📊 Database Setup
+
+### Local Development (MongoDB Compass)
+1. Download and install MongoDB Compass: https://www.mongodb.com/products/compass
+2. Open Compass and connect to default: `mongodb://127.0.0.1:27017`
+3. Database will be created automatically on first run
+4. Run `npm run seed` to populate 20 sample properties
+
+### Production (MongoDB Atlas)
+1. Create account at https://www.mongodb.com/cloud/atlas
+2. Create a cluster and database
+3. Get connection string
+4. Set `MONGO_URI` in production environment variables
+
+## 📊 Database Seeding
+
+The `npm run seed` command:
+- Connects to MongoDB (local or Atlas)
+- Clears existing properties collection
+- Inserts 20 sample properties
+- Each property includes:
+  - 5 Unsplash image URLs (main + gallery)
+````
 ```
 
 ### Backend Deployment
