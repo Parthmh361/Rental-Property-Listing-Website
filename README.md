@@ -1,33 +1,49 @@
-# Rental Property Listing Website (MERN)
+
+# 🏠 Rental Property Listing Website (MERN)
+# THE LOGGING IN PROCESS MIGHT TAKE A FEW SECONDS AS IT IS HOSTED ON RENDER.COM FREE INSTANCE.
+**Live Demo:** 👉 [https://frontend-for-rental-property-listin.vercel.app/](https://frontend-for-rental-property-listin.vercel.app/)  
+
+**Demo Credentials for Testing:**
+
+Email: parth@gmail.com
+Password: admin@123
 
 A professional full-stack MERN application for browsing and listing rental properties. Features comprehensive authentication with JWT, dynamic property management, image galleries, reviews, and advanced search filters. Built with modern best practices including Vite, React 18, Bootstrap 5, and MongoDB Compass (Local Database).
+A professional full-stack **MERN application** for browsing and listing rental properties.  
+Includes secure authentication, dynamic property management, image galleries, reviews, and advanced search filters.  
+Built with **Vite, React 18, Bootstrap 5, Node.js, Express, and MongoDB Atlas** using modern best practices.
+
+---
 
 ## 🌟 Features
 
-### Authentication & Authorization
-- User signup/login with bcryptjs password hashing and JWT authentication
-- Protected routes with middleware authentication
-- Persisted auth state using localStorage
-- Secure token-based API communication
-- Role-based access control for property listings
+### 🔐 Authentication & Authorization
+- User signup/login with bcryptjs password hashing and JWT authentication  
+- Protected routes with middleware verification  
+- Persisted auth state using localStorage  
+- Secure token-based API communication  
+- Role-based access control for property listings  
 
-### Property Management
-- Browse 20+ pre-seeded rental properties with full details
-- Create new property listings with dynamic form validation
-- Upload multiple property images (gallery support with 5 images per property)
-- Advanced search filters by location, price range, property type, and amenities
-- Dynamic state/city dropdown mapping (28 Indian states, 200+ cities)
-- Property detail pages with image carousel and comprehensive information
-- View counter and average rating system for properties
-- Owner contact information (name, phone, email) with clickable tel/mailto links
+### 🏘️ Property Management
+- Browse **20+ pre-seeded rental properties** with full details  
+- Create new property listings with dynamic form validation  
+- Upload multiple property images (gallery support up to 5 images per property)  
+- Advanced search filters by location, price range, property type, and amenities  
+- Dynamic state/city dropdown mapping (28 Indian states, 200+ cities)  
+- Property detail pages with carousel, amenities, and contact info  
+- Real-time view counter and average rating system  
 
-### User Experience
-- Clean, responsive Bootstrap 5 UI with modern design
-- Professional image carousel with thumbnail gallery
-- Sticky property details card on detail pages
-- Amenity badges and property type indicators
-- Real-time view count and rating display
-- Search suggestions and auto-filtering
+### 💬 Reviews & Ratings
+- Leave reviews and ratings on properties  
+- Display average property ratings and user details  
+- Star-based interactive rating system  
+
+### 🎨 User Experience
+- Clean, responsive **Bootstrap 5** UI with modern layout  
+- Professional image carousel and thumbnail gallery  
+- Sticky property details card on property view pages  
+- Amenity badges and property type indicators  
+- Real-time filtering and suggestions  
 
 ### Reviews & Ratings
 - Leave reviews and ratings on properties
@@ -40,31 +56,52 @@ A professional full-stack MERN application for browsing and listing rental prope
 - 20 sample properties across major Indian cities
 - Comprehensive data schema with validation
 - Efficient querying with Mongoose ODM
+### 🗄️ Database
+- **MongoDB Atlas** (cloud-hosted)  
+- 20+ sample properties pre-seeded across major Indian cities  
+- Comprehensive data schema with validation  
+- Efficient querying and relationships with **Mongoose ODM**
+
+---
+
+## 🧪 Test the Website
+
+You can directly explore and test the live deployed version here:  
+👉 **[https://frontend-for-rental-property-listin.vercel.app/](https://frontend-for-rental-property-listin.vercel.app/)**  
+
+Use the demo credentials below to log in and experience full app functionality:  
+
+Email: parth@gmail.com
+Password: admin@123
+
+---
 
 ## 📋 Tech Stack
 
-### Frontend
-- **React 18** - UI library with hooks
-- **Vite 5** - Lightning-fast build tool
-- **React Router 6** - Client-side routing
-- **Axios** - HTTP client with interceptors
-- **Bootstrap 5** - Responsive CSS framework
-- **Lucide React** - Beautiful icon library
+### 🖥️ Frontend
+- **React 18** – Modern UI library  
+- **Vite 5** – Lightning-fast build tool  
+- **React Router 6** – SPA routing  
+- **Axios** – HTTP client with interceptors  
+- **Bootstrap 5** – Responsive CSS framework  
+- **Lucide React** – Modern icon library  
 
-### Backend
-- **Node.js 18+** - JavaScript runtime
-- **Express 4** - Web framework
-- **MongoDB** - NoSQL database (Atlas cloud)
-- **Mongoose** - ODM for MongoDB
-- **JWT** - Stateless authentication
-- **bcryptjs** - Password hashing
-- **CORS** - Cross-origin resource sharing
-- **dotenv** - Environment variable management
+### ⚙️ Backend
+- **Node.js 18+** – JavaScript runtime  
+- **Express 4** – Web framework  
+- **MongoDB (Atlas)** – NoSQL cloud database  
+- **Mongoose** – ODM for schema management  
+- **JWT** – Stateless authentication  
+- **bcryptjs** – Password hashing  
+- **CORS** – API cross-origin access  
+- **dotenv** – Environment variable management  
+
+---
 
 ## 📁 Folder Structure
 
 ```
-fullstack-auth-app/
+Rental_Property_Listing_Website/
 ├── backend/
 │   ├── config/
 │   │   └── db.js                 # MongoDB connection
@@ -127,6 +164,9 @@ fullstack-auth-app/
 - npm or yarn package manager
 - MongoDB Compass (local MongoDB database)
 - Modern web browser
+- Node.js 18+  
+- npm or yarn  
+- MongoDB Atlas account  
 
 ### Backend Setup
 
@@ -204,127 +244,102 @@ fullstack-auth-app/
 ## 📖 Usage Guide
 
 ### For Users
-
-1. **Homepage**: Browse all available rental properties
-   - Use search bar to filter by location
-   - Filter by price range, property type, amenities
-   - Click any property card to view full details
-
-2. **Property Details**:
-   - View property images in carousel
-   - See amenities, specifications, and owner information
-   - View and leave reviews
-   - See view count and average rating
-
-3. **Authentication**:
-   - Sign up to create account
-   - Login to access property listing feature
-   - Auth state persists across sessions
-
-4. **List a Property** (when logged in):
-   - Click "List Property" in navbar
-   - Fill in property details (title, description, price, location)
-   - Select state (28 options) → auto-populate city dropdown
-   - Enter property specifications (bedrooms, bathrooms, size)
-   - Select furnishing and amenities
-   - Add owner contact information (name, phone, email)
-   - Add image URLs (main + up to 5 gallery images)
-   - Submit to create listing
-
-### For Developers
-
-#### API Endpoints
-
-**Authentication:**
-- `POST /api/auth/signup` - Register new user
-- `POST /api/auth/login` - Login and get JWT token
-
-**Properties:**
-- `GET /api/properties` - Get all properties
-- `GET /api/properties/:id` - Get property details
-- `GET /api/properties/:id/increment-view` - Increment view count
-- `POST /api/properties` - Create new property (auth required)
-- `PUT /api/properties/:id` - Update property (auth required)
-- `DELETE /api/properties/:id` - Delete property (auth required)
-
-**Reviews:**
-- `GET /api/reviews/property/:propertyId` - Get property reviews
-- `POST /api/reviews` - Add review (auth required)
-
-#### Data Models
-
-**User:**
-```javascript
-{
-  email: String (unique),
-  password: String (hashed),
-  createdAt: Date
-}
-```
-
-**Property:**
-```javascript
-{
-  title: String,
-  description: String,
-  price: Number,
-  location: String,
-  city: String,
-  state: String,
-  pincode: String,
-  bedrooms: Number,
-  bathrooms: Number,
-  sizeSqft: Number,
-  type: String,
-  furnishing: String,
-  amenities: [String],
-  imageUrl: String,
-  gallery: [String],
-  ownerName: String,
-  ownerPhone: String,
-  ownerEmail: String,
-  createdBy: ObjectId,
-  views: Number,
-  averageRating: Number,
-  createdAt: Date
-}
-```
-
-**Review:**
-```javascript
-{
-  property: ObjectId,
-  user: ObjectId,
-  rating: Number (1-5),
-  comment: String,
-  createdAt: Date
-}
-```
-
-## 🔐 Security Features
-
-- JWT-based stateless authentication
-- Password hashing with bcryptjs (salt rounds: 10)
-- Protected routes with middleware verification
-- CORS configuration for API access
-- Secure environment variable management
-- Input validation on forms and API endpoints
-
-## 🌍 Supported Locations
-
-**28 Indian States with 200+ Cities:**
-- Andaman and Nicobar Islands, Andhra Pradesh, Arunachal Pradesh
-- Assam, Bihar, Chhattisgarh, Chandigarh, Dadra & Nagar Haveli
-- Daman & Diu, Delhi, Goa, Gujarat, Haryana, Himachal Pradesh
-- Jharkhand, Karnataka, Kerala, Ladakh, Lakshadweep, Madhya Pradesh
-- Maharashtra, Manipur, Meghalaya, Mizoram, Nagaland, Odisha
-- Punjab, Puducherry, Rajasthan, Sikkim, Tamil Nadu, Telangana
-- Tripura, Uttar Pradesh, Uttarakhand, West Bengal
-
-## 🏗️ Production Deployment
-
-### Frontend Build
 ```bash
+cd backend
+cp .env.example .env
+npm install
+npm run seed
+npm run dev
+
+Server runs at http://localhost:5000
+Frontend Setup
+cd frontend
+cp .env.example .env
+npm install
+npm run dev
+
+App runs at http://localhost:5173
+
+📖 Usage Guide
+For Users
+
+
+Homepage: Browse all available rental properties
+
+
+Filter by price, location, property type, or amenities
+
+
+Click any property to view its details
+
+
+
+
+Property Details:
+
+
+View carousel images and amenities
+
+
+Read/write reviews
+
+
+See owner contact details and ratings
+
+
+
+
+Authentication:
+
+
+Sign up or login
+
+
+Auth persists across sessions
+
+
+
+
+Add New Property:
+
+
+Fill property form (details, pricing, contact, images)
+
+
+Select state → auto-populated cities
+
+
+Submit to create new listing
+
+
+
+
+
+🔐 Security Features
+
+
+JWT-based authentication
+
+
+Password hashing with bcryptjs (salt rounds: 10)
+
+
+Protected routes with middleware
+
+
+CORS and env-based configuration
+
+
+Input and form validation
+
+
+
+🌍 Supported Locations
+Covers 28 Indian states and 200+ cities, including:
+Andhra Pradesh, Maharashtra, Gujarat, Karnataka, Tamil Nadu, Delhi, Rajasthan, West Bengal, Punjab, Kerala, and many more.
+
+🏗️ Production Deployment
+Frontend
 cd frontend
 npm run build
 npm run preview
@@ -392,61 +407,84 @@ The `npm run seed` command:
 ### Environment Variables (Production)
 ```
 MONGO_URI=mongodb+srv://user:pass@prod-cluster.mongodb.net/db
+
+Backend
+Deploy to Heroku, Railway, or Render
+Set environment variables in production dashboard
+Whitelist MongoDB Atlas IP
+Update CLIENT_ORIGIN for CORS
+Production .env Example:
+MONGO_URI=mongodb+srv://user:pass@cluster.mongodb.net/rental_app
 JWT_SECRET=long_random_secure_secret_key_minimum_32_chars
 PORT=5000
 CLIENT_ORIGIN=https://your-domain.com
 NODE_ENV=production
-```
 
-## 📊 Database Seeding
 
-The `npm run seed` command:
-- Connects to MongoDB Atlas
-- Clears existing properties collection
-- Inserts 20 sample properties
-- Each property includes:
-  - 5 Unsplash image URLs (main + gallery)
-  - Realistic owner contact information
-  - Complete property specifications
-  - Geographic distribution across Indian cities
+📊 Database Seeding
+npm run seed:
 
-## 🔄 State & City Mapping
 
-Properties support dynamic filtering with:
-- 28 Indian states
-- 200+ cities across states
-- Frontend automatically populates available cities based on selected state
-- Backend validates location data
+Clears old data
 
-## 🎯 Future Enhancements
 
-- [ ] User profile page with listing history
-- [ ] Advanced search with radius filtering
-- [ ] Map integration (Google Maps API)
-- [ ] Image upload to cloud storage (Cloudinary/AWS S3)
-- [ ] Email notifications for saved properties
-- [ ] Admin dashboard for moderation
-- [ ] Payment integration for premium listings
-- [ ] Booking/scheduling feature
-- [ ] Property favorites/wishlist
-- [ ] Social sharing functionality
-- [ ] Mobile app using React Native
-- [ ] Real-time chat with property owners
+Adds 20 sample properties
 
-## 📝 License
 
-MIT - Feel free to use this project for personal and commercial purposes.
+Each property has 5 images, realistic data, and owner info
 
-## 👨‍💻 Contributors
 
-IFSD Semester 5 Final Project - Rental Property Listing Platform
 
-## 📞 Support
+🔄 State & City Mapping
 
-For issues or questions, please refer to the project documentation or create an issue in the repository.
+
+28 Indian states
+
+
+200+ cities dynamically loaded
+
+
+Backend validation ensures correct data
+
+
+
+🎯 Future Enhancements
+
+
+ User profile page with listing history
+
+
+ Map integration (Google Maps API)
+
+
+ Cloud image upload (Cloudinary/AWS S3)
+
+
+ Admin dashboard
+
+
+ Premium listing payments
+
+
+ Booking & scheduling system
+
+
+ Favorites/wishlist
+
+
+ Real-time chat with owners
+
+
+ Mobile app (React Native)
+
+
+
+📞 Support
+For questions or issues, please refer to the documentation or open an issue in the repository.
+
+Last Updated: November 2025
+Version: 1.0.0
+Status: Production Ready
+Live Demo: https://frontend-for-rental-property-listin.vercel.app/
 
 ---
-
-**Last Updated:** November 2025
-**Version:** 1.0.0
-**Status:** Production Ready
